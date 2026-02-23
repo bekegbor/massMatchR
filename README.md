@@ -10,9 +10,9 @@ It can also be installed and run locally if modifications are required, for exam
 
 For detailed instructions, examples, and file specifications, see:
 
-- [User Manual](docs/MANUAL.md)  
-- [Example Data](example_data/)  
-- [Local Installation Guide](docs/LOCAL_INSTALL.md)
+- **User manual:** [User Manual](docs/MANUAL.md)  
+- **Example input files:** [Example Data](example_data/)  
+- **Local installation & run guide:** [Local Installation Guide](docs/LOCAL_INSTALL.md)
 
 Although massMatchR was originally developed for glycan identification from MALDI-TOF data, its core function is to match structured datasets based on selected columns and a numerical tolerance. Because of this flexibility, it can be applied to many other data-matching tasks across different scientific fields
 
@@ -26,3 +26,4 @@ If you use MassMatchR in academic work, please cite the manuscript and/or this r
 
 ## License
 
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
