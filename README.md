@@ -1,33 +1,71 @@
 # MassMatchR
 
-**MassMatchR** is an interactive R Shiny application for matching mass spectrometry (MS) peak lists against a user-defined reference database. It enables researchers to identify compounds across multiple samples simultaneously, visualize relative or absolute signal intensities, annotate bar charts with molecular structure images, and export publication-ready figures and tables — all without writing a single line of code.
+**MassMatchR** is an R/Shiny application for matching MALDI‑TOF MS peak lists (m/z + intensity) to a user‑provided reference glycan database, and for visualizing and exporting the matched results across **samples** and **groups**.
+
+It is designed to be:
+- **Fast and interactive** (reactive table + Plotly bar plots)
+- **Flexible about input formats** (you select which columns to use for matching)
+- **Reproducible and shareable** (hosted Shiny instance and a fully local version)
+
+<p align="center">
+  <img src="docs/images/image1.png" width="900">
+</p>
+
+## Where to use it
+
+### Hosted (online) instance
+As described in the accompanying manuscript, MassMatchR has been hosted at:
+
+- http://dublin.embnet.sk:3838/massMatchR/
+
+If the server is unavailable, you can run the same app locally (see below).
+
+### Source code
+This repository contains the Shiny app source code (`ui.R`, `server.R`, `global.R`, `run.R`) and full documentation.
+
+## Quick start (local)
+
+```r
+# 1) Install required packages (see scripts/install_packages.R)
+source("scripts/install_packages.R")
+
+# 2) Run the app from the repository root
+setwd("path/to/massMatchR_repo")
+shiny::runApp(port = 8100)
+```
+
+More detailed instructions (including browser configuration and folder structure):
+- **Local installation & run guide:** `docs/LOCAL_INSTALL.md`
+
+## What you need to upload
+
+MassMatchR works with two Excel workbooks:
+
+1. **Reference database (.xlsx)**  
+   A *single-sheet* Excel file with (at minimum):
+   - a **Name** column (glycan/annotation label)
+   - an **m/z** column (theoretical mass to match against)
+   - optionally an **Image ID** column (numeric IDs used to pick PNG structures)
+
+2. **Sample data (.xlsx)**  
+   A *multi-sheet* Excel file where:
+   - **each sheet = one sample**
+   - each sheet contains at least **m/z** and **Intensity** columns
+   - all sheets should follow the **same column layout**
+
+Full details, examples, and file templates:
+- **User manual:** `docs/MANUAL.md`
+- **Example input files:** `example_data/`
+
+## Citation
+
+If you use MassMatchR in academic work, please cite the manuscript and/or this repository.
+A machine‑readable citation file is included: `CITATION.cff`.
+
+## License
+
+A default MIT license is included in `LICENSE`.  
+If you need a different license (e.g., GPL‑3), replace the file before publishing.
 
 ---
-
-## Table of Contents
-
-1. [Overview](#overview)
-2. [Where to Find and Use It](#where-to-find-and-use-it)
-3. [Input File Requirements](#input-file-requirements)
-   - [Reference Database File](#reference-database-file)
-   - [Sample Data File](#sample-data-file)
-   - [Molecular Structure Images](#molecular-structure-images)
-4. [App Walkthrough and Manual](#app-walkthrough-and-manual)
-   - [Sidebar — Global Controls](#sidebar--global-controls)
-   - [Tab: Analyze Data → Samples](#tab-analyze-data--samples)
-   - [Tab: Analyze Data → Groups](#tab-analyze-data--groups)
-   - [Tab: Explore Reference Data](#tab-explore-reference-data)
-5. [Local Installation](#local-installation)
-   - [Prerequisites](#prerequisites)
-   - [Required R Packages](#required-r-packages)
-   - [Directory Structure](#directory-structure)
-   - [Configuring the Default Browser](#configuring-the-default-browser)
-   - [Running the App](#running-the-app)
-6. [Citation](#citation)
-7. [License](#license)
-
----
-
-## Overview
-
-MassMatchR compares measured m/z (mass-to-charge) peak lists against a reference compound database using a user-defined tolerance window. For each compound in the reference, the closest measured peak within ± tolerance is located in each sample. The matched intensities are then displayed as grouped bar charts (one bar per sample per compound), with optional overlays of molecular structure images, compound names, and percentage labels. Samples can be freely grouped for between-group comparisons.
+**Version in UI:** MassMatchR v1.0.0 (see app title bar)
