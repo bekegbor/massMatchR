@@ -47,8 +47,8 @@ MassMatchR performs **tolerance-based nearest-neighbour m/z matching**:
 
 ### Reference Database
 
-**File type:** Microsoft Excel file (`.xlsx`).
-**Sheets:** 1 sheet only (if multiple sheets are present, only the first sheet is read).
+**File type:** Microsoft Excel file (`.xlsx`).<br>
+**Sheets:** 1 sheet only (if multiple sheets are present, only the first sheet is read).<br>
 **Header row:** the first row must contain column names. These will appear in the sidebar under "Pair from columns" panel.
 
 **Minimum required columns**
