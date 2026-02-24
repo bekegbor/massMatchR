@@ -74,3 +74,29 @@ This flexible structure allows users to create a single reference database conta
 As a result, there is no need to create separate reference databases for different modification types. It also allows to match sample data using modified (e.g., permethylated) m/z values while displaying glycan structures based on the unmodified m/z values.
 
 ---
+
+### Sample Data
+
+**File type:** Microsoft Excel file (`.xlsx`).<br>
+**Sheets:** multi-sheet workbook.<br>
+**Rule:** one sheet = one sample.
+
+Each sheet must contain at least:
+- an **m/z** column (measured peaks),
+- an **Intensity** column.
+
+All sheets should have the **same column structure** (same headers and column order).
+
+In the sidebar you control how the sheets are read:
+- **Start reading at row:** row number containing the *header* (default `1`),
+- **m/z column:** column index containing measured m/z values,
+- **Intensity column:** column index containing intensity values.
+
+This flexible setup allows you to use measured data exported from other softwares directly, without modifying the original column structure.
+
+In the main panel, you can select:
+- **Number of samples:** number of sheets to use (starting from sheet 1). The app also shows how many sheets (samples) are available in the uploaded file.
+
+By default, sample names are taken from the *sheet names*. You can rename them in the UI.
+
+---
