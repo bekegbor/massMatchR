@@ -74,7 +74,7 @@ This flexible structure allows users to create a single reference database conta
 As a result, there is no need to create separate reference databases for different modification types. It also allows to match sample data using modified (e.g., permethylated) m/z values while displaying glycan structures based on the unmodified m/z values.
 
 You can download and test an example reference file here:  
-[reference_example.xlsx](example_data/reference_example.xlsx)
+[reference_example.xlsx](../example_data/reference_example.xlsx)
 
 ---
 
@@ -103,6 +103,6 @@ This flexible setup allows you to use measured data exported from other software
 By default, sample names are taken from the *sheet names*. You can rename them in the UI.
 
 You can download and test an example reference file here:  
-[sample_example.xlsx](example_data/sample_example.xlsx)
+[sample_example.xlsx](../example_data/sample_example.xlsx)
 
 ---
