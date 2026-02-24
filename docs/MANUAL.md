@@ -12,7 +12,7 @@ If you are interested only in running the application locally, please refer to t
 2. [Input Files](#2-input-files)
    - [Reference Database](#reference-database)
    - [Sample Data](#sample-data)
-   - [Molecular Structure Images](#molecular-structure-images)
+   - [Glycan Structures](#glycan-structures)
 3. [App Layout Overview](#3-app-layout-overview)
 4. [Sidebar — Global Controls](#4-sidebar--global-controls)
    - [Reference Database Section](#reference-database-section)
