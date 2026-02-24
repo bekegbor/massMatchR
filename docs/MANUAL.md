@@ -106,3 +106,22 @@ You can download and test an example reference file here:
 [sample_example.xlsx](../example_data/sample_example.xlsx)
 
 ---
+
+### Glycan Structures
+
+To display glycan structures, the image filenames must match either:
+- the glycan names from the reference database, or
+- an m/z value from any column of the reference database (rounded to 4 decimal places).
+
+
+Example filenames:
+- `H5N4F1.png`
+- `1579.783.png`
+
+The filename (without the extension) must correspond to the values specified in the **Images** column of the reference file.
+
+You can verify whether images are correctly paired with the reference database in the **Explore Reference Data** tab. This tab displays image thumbnails in a table (hover over an image to zoom).
+
+In the **Plots** section, structures can be displayed above the bars when the **"Structures"** option is enabled.
+
+---
