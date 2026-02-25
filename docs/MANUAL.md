@@ -20,6 +20,11 @@ If you are interested only in running the application locally, please refer to t
      - [Samples Tab](#samples-tab)
        - [Table Tab](#table-tab)
        - [Plot Tab](#plot-tab)
+     - [Groups Tab](#groups-tab)
+       - [Group Assignment](#group-assignment)
+       - [Group Options Panel](#group-options-panel)
+       - [Group Table Tab](#group-table-tab)
+       - [Group Plot Tab](#group-plot-tab)
 
 ---
 
@@ -223,3 +228,71 @@ You can show or hide:
 - **Image space:** Controls spacing between bars and annotations.
 
 ---
+
+#### Groups Tab
+
+The **Groups** tab allows you to combine individual samples into user-defined groups and compare aggregated results. This is useful for summarizing biological replicates or experimental conditions.
+
+For each group, the app calculates the **mean intensity** of the matched glycans across the assigned samples. You can choose to display variability using either **standard deviation (SD)** or **standard error of the mean (SEM)**.
+
+---
+
+##### Group Assignment
+
+- **Number of groups:** Select how many groups you want to define.
+
+---
+
+##### Group Options Panel
+
+In the **Group Options** panel, you can:
+
+- **Rename groups:**  
+  Enter custom group names separated by `;`  
+  Example:  
+  `Control;Treatment;Knockout;`
+
+- **Define group colors:**  
+  Select the color used for each group in the plots.
+
+---
+
+##### Group Table Tab
+
+- Displays the grouped results table.  
+- Intensity values represent the **mean intensity per group**.
+- For each group, both **SD** and **SEM** are calculated.
+- **Export table:** Downloads the results as `group_table.xlsx`.
+
+---
+
+##### Group Plot Tab
+
+Displays an interactive Plotly bar chart showing aggregated group values.
+
+In the **Plot Settings**, you can customize:
+
+**Plot Title Options**
+- Plot title
+- Plot title font size
+
+**Axis Label Options**
+- X-axis label rotation
+- Axis label font size
+- Axis tick font size
+
+**Error Bars (SD/SEM)**
+- Select whether **SD** or **SEM** is displayed in the plot.
+
+**Display Options (above bars)**
+
+You can show or hide:
+
+- **Structures**
+  - Image size
+- **Names**
+  - Font size
+  - Angle
+- **Percentages**
+  - Font size
+- **Image space:** Controls spacing between bars and annotations.
