@@ -297,3 +297,20 @@ You can show or hide:
 - **Percentages**
   - Font size
 - **Image space:** Controls spacing between bars and annotations.
+
+---
+
+### Explore Reference Data tab
+
+This tab displays the full reference database as a scrollable table with three columns:
+
+- **Name** — glycan name from the selected *Names* column  
+- **m/z** — reference m/z value  
+- **Structure** — thumbnail image of the matched images (hover to zoom)
+
+This tab is useful for:
+
+- Confirming that the reference file was read correctly  
+- Checking which glycans have associated structure images  
+- Browsing the database before starting the analysis
+
