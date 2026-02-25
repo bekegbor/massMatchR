@@ -13,23 +13,13 @@ If you are interested only in running the application locally, please refer to t
    - [Reference Database](#reference-database)
    - [Sample Data](#sample-data)
    - [Glycan Structures](#glycan-structures)
-3. [App Layout Overview](#3-app-layout-overview)
-4. [Sidebar — Global Controls](#4-sidebar--global-controls)
-   - [Reference Database Section](#reference-database-section)
-   - [Sample Data Section](#sample-data-section)
-   - [Matching Settings](#matching-settings)
-5. [Tab: Analyze Data → Samples](#5-tab-analyze-data--samples)
-   - [Analysis Controls](#analysis-controls)
-   - [Sample Options Panel](#sample-options-panel)
-   - [Samples → Table](#samples--table)
-   - [Samples → Plot](#samples--plot)
-6. [Tab: Analyze Data → Groups](#6-tab-analyze-data--groups)
-   - [Group Assignment](#group-assignment)
-   - [Group Options Panel](#group-options-panel)
-   - [Groups → Group Table](#groups--group-table)
-   - [Groups → Group Plot](#groups--group-plot)
-7. [Tab: Explore Reference Data](#7-tab-explore-reference-data)
-8. [Exporting Results](#8-exporting-results)
+3. [UI Overview](#3-ui-overview)
+   - [Sidebar](#sidebar)
+   - [Analyze Data Tab](#analyze-data-tab)
+     - [Data Filtering/Selection Controls](#data-filteringselection-controls)
+     - [Samples Tab](#samples-tab)
+       - [Table Tab](#table-tab)
+       - [Plot Tab](#plot-tab)
 
 ---
 
@@ -123,5 +113,113 @@ The filename (without the extension) must correspond to the values specified in 
 You can verify whether images are correctly paired with the reference database in the **Explore Reference Data** tab. This tab displays image thumbnails in a table (hover over an image to zoom).
 
 In the **Plots** section, structures can be displayed above the bars when the **"Structures"** option is enabled.
+
+---
+
+## 3. UI Overview
+
+### Sidebar
+
+The **Sidebar** (left panel) contains the following controls:
+
+- **Upload reference database file (.xlsx)**
+- **Pair from columns:** Lists all available column names from the reference file. From these, you must select:
+  - **Names** (column index)
+  - **m/z** (column index)
+  - **Images** (column index)
+- **Upload data file (.xlsx)** (multi-sheet workbook)
+- **Start reading at row:** Select the row in your sample file that contains the header.
+- **m/z column:** Column index containing measured m/z values.
+- **Intensity column:** Column index containing intensity values.
+- **Tolerance:** Matching window in ± Da (default: 0.5).
+- **Intensity display mode:**
+  - **Absolute:** Use intensity values as provided.
+  - **Relative:** Calculate percentages per sample.
+
+---
+
+### Analyze Data Tab
+
+This is the main analysis view. It is divided into:
+
+- **Data Filtering/Selection Controls**
+- **Samples**
+- **Groups**
+
+---
+
+#### Data Filtering/Selection Controls
+
+These settings apply to both **Samples** and **Groups**.
+
+- **Recalculate (Yes/No)**  
+  Controls how relative intensities are recalculated when m/z values are excluded:
+  - **Yes:** Relative intensities are calculated using only the currently selected m/z values. The total per sample will always sum to 100%.
+  - **No:** Relative intensities retain the original denominator.
+
+- **Filter by minimum value**  
+  Values below this threshold are hidden in plots but remain in the results table.
+
+- **Select/Deselect m/z**  
+  Determines which glycans are included in the results table and relative calculations.
+
+- **Select/Deselect Info**  
+  Determines which annotations (names, structures, percentages) are displayed above the bars in plots.
+
+---
+
+#### Samples Tab
+
+Here you can configure:
+
+- **Number of samples:** Number of sheets to analyze (starting from sheet 1).
+
+In the **Sample Options** panel, you can:
+
+- **Rename samples:**  
+  Sample names default to the sheet names in your Excel file.  
+  You can rename them by entering names separated by `;`  
+  Example:  
+  `Sample1;Sample2;Control;`
+
+- **Define sample color:**  
+  Choose the bar color for each sample in the plot.
+
+---
+
+##### Table Tab
+
+- Displays the matched results table (reference data + matched sample intensities).
+- **Export table:** Downloads the results as `sample_table.xlsx`.
+
+---
+
+##### Plot Tab
+
+Displays an interactive Plotly bar chart.
+
+In the **Plot Settings**, you can customize:
+
+**Plot Title Options**
+- Plot title (updates when clicking the “Name plot” button)
+- Plot title font size
+
+**Axis Label Options**
+- X-axis label rotation
+- Axis label font size
+- Axis tick font size
+
+**Display Options (above bars)**
+
+You can show or hide:
+
+- **Structures**
+  - Image size
+- **Names**
+  - Font size
+  - Angle
+- **Percentages**
+  - Font size
+- **Image space:** Controls spacing between bars and annotations.
 
 ---
