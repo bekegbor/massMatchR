@@ -25,7 +25,8 @@ If you are interested only in running the application locally, please refer to t
        - [Group Options Panel](#group-options-panel)
        - [Group Table Tab](#group-table-tab)
        - [Group Plot Tab](#group-plot-tab)
-
+   - [Explore Reference Data tab](#explore-reference-data-tab)
+  
 ---
 
 ## 1. How MassMatchR Works
