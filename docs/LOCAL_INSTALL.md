@@ -1,10 +1,11 @@
 
-# Local Installation
+# Local Installation Guide
+
+This guide explains how to install dependencies and run **MassMatchR** on your own computer (Windows/macOS/Linux).
 
 ## Prerequisites
 
-- **R** ≥ 4.1.0 — [https://www.r-project.org/](https://www.r-project.org/)
-- **RStudio** (recommended but not required) — [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+- Download and install **R** (≥ 4.1.0) [https://www.r-project.org/](https://www.r-project.org/).
 - A modern web browser (Google Chrome or Mozilla Firefox recommended)
 
 ## Required R Packages
@@ -34,7 +35,7 @@ install.packages(c(
 
 ### Directory Structure
 
-After cloning or downloading the repository, the following layout is expected:
+Download the latest release as a ZIP file and extract it. The following folder structure is expected:
 
 ```
 MassMatchR/
@@ -47,15 +48,9 @@ MassMatchR/
     │   ├── 386.355.png
     │   ├── 702.567.png
     │   └── ...
-    └── references/     ← (optional) default reference .xlsx files
-        └── my_reference.xlsx
 ```
 
-> The `www/` folder is automatically served as the static file root by Shiny. Files in `www/images/` are directly accessible to the browser for rendering inside plots.
-
-**Populating `www/images/`:** Export or convert your molecular structure images to PNG format and rename them to match the rounded m/z value of each compound in your reference file (e.g. compound at m/z 386.3549 → file name `386.355.png`). For disambiguation when two compounds round to the same value, append `_1`, `_2`, etc. (e.g. `386.355_1.png`, `386.355_2.png`).
-
-**Populating `www/references/`:** Any `.xlsx` files placed here will appear in the app's reference file list at startup (loaded via `global.R`). This is purely a convenience — you can always upload a reference file through the browser interface instead.
+To use your own images, copy them into the `www/images/` folder. For detailed instructions on naming and file format, see the [Glycan Structures](MANUAL.md#glycan-structures) section in the [User Manual](MANUAL.md).
 
 ---
 
