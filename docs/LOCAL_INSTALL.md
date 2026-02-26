@@ -10,3 +10,24 @@
 ## Required R Packages
 
 Install all dependencies by running the following in your R console:
+
+### Required R Packages
+
+Install all dependencies by running the following in your R console:
+
+```r
+install.packages(c(
+  "shiny",
+  "openxlsx",
+  "processx",
+  "shinyBS",
+  "shinyjs",
+  "htmlwidgets",
+  "DT",
+  "tableHTML",
+  "ggplot2",
+  "ggrepel",
+  "colourpicker",
+  "plotly"
+))
+```
