@@ -103,7 +103,7 @@ If your system does not automatically open a browser, you can either:
 Open R, set the working directory to the `massMatchR/` folder, then run:
 
 ```r
-setwd("/path/to/MassMatchR")
+setwd("/path/to/MassMatchR")   # adjust path
 shiny::runApp(appDir = getwd())
 ```
 
