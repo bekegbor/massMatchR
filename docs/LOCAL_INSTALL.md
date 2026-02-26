@@ -98,7 +98,7 @@ If your system does not automatically open a browser, you can either:
 
 ## 5. Running the App
 
-**Option A — using `run.R` (recommended):**
+**Option A — using `shiny::runApp()`:**
 
 Open R, set the working directory to the `massMatchR/` folder, then run:
 
@@ -107,7 +107,7 @@ setwd("/path/to/MassMatchR")
 shiny::runApp(appDir = getwd())
 ```
 
-**Option B — using `shiny::runApp()`:**
+**Option B — using `run.R`:**
 
 Open R, set the working directory to the `massMatchR/` folder, then run:
 
