@@ -3,16 +3,26 @@
 
 This guide explains how to install dependencies and run **MassMatchR** on your own computer (Windows/macOS/Linux).
 
-## Prerequisites
+## Table of Contents
+
+1. [Prerequisites](#1-prerequisites)
+2. [Required R Packages](#2-required-r-packages)
+3. [Directory Structure](#3-directory-structure)
+4. [Browser Configuration](#4-browser-configuration)
+   - [4.1 Windows: Set a Specific Browser Executable (Optional)](#41-windows-set-a-specific-browser-executable-optional)
+   - [4.2 macOS / Linux](#42-macos--linux)
+5. [Running the App](#5-running-the-app)
+
+---
+
+## 1. Prerequisites
 
 - Download and install **R** (≥ 4.1.0) [https://www.r-project.org/](https://www.r-project.org/).
 - A modern web browser (Google Chrome or Mozilla Firefox recommended)
 
-## Required R Packages
+---
 
-Install all dependencies by running the following in your R console:
-
-### Required R Packages
+## 2. Required R Packages
 
 Install all dependencies by running the following in your R console:
 
@@ -33,7 +43,9 @@ install.packages(c(
 ))
 ```
 
-### Directory Structure
+---
+
+## 3. Directory Structure
 
 Download the latest release as a ZIP file and extract it. The following folder structure is expected:
 
@@ -54,40 +66,50 @@ To use your own images, copy them into the `www/images/` folder. For detailed in
 
 ---
 
-### Configuring the Default Browser
+## 4. Browser configuration
 
-The app runs on a local port (`8100` by default). The browser to open automatically is configured in `global.R`:
+### 4.1 Windows: set a specific browser executable (optional)
+
+In `global.R`, Chrome is set as the default browser:
 
 ```r
-# global.R — uncomment/edit the line matching your system
-
-# Google Chrome on Windows (64-bit)
-# options(browser = "C:/Program Files/Google/Chrome/Application/chrome.exe")
-
-# Mozilla Firefox on Windows (default)
-options(browser = "C:/Program Files/Mozilla Firefox/firefox.exe")
-
-# macOS — Chrome
-# options(browser = "open -a 'Google Chrome'")
-
-# macOS — Firefox
-# options(browser = "open -a Firefox")
-
-# Linux — default system browser
-# options(browser = "xdg-open")
+options(browser = "C:/Program Files/Google/Chrome/Application/chrome.exe")
 ```
 
-Edit `global.R` to uncomment and correct the path for your operating system and preferred browser **before** starting the app.
+If you would like to switch to Firefox, comment out the line above and uncomment the following line:
 
-If you prefer to open the URL manually, simply comment out all `options(browser = ...)` lines and navigate to `http://localhost:8100` in your browser after starting the app.
+```r
+# options(browser = "C:/Program Files/Mozilla Firefox/firefox.exe")
+```
+
+If these paths do not match your system, you can either:
+- update the path to match your browser installation, or
+- comment out the line entirely.
+
+### 4.2 macOS / Linux
+
+Usually, you **do not** need to set `options(browser = ...)`.  
+If your system does not automatically open a browser, you can either:
+
+- set `options(shiny.launch.browser = TRUE)` and let R choose the default browser, or  
+- set `options(browser = "/usr/bin/firefox")` (or a similar path to your preferred browser).
 
 ---
 
-### Running the App
+## 5. Running the App
 
 **Option A — using `run.R` (recommended):**
 
-Open R or RStudio, set the working directory to the `MassMatchR/` folder, then run:
+Open R, set the working directory to the `massMatchR/` folder, then run:
+
+```r
+setwd("/path/to/MassMatchR")
+shiny::runApp(appDir = getwd())
+```
+
+**Option B — using `shiny::runApp()`:**
+
+Open R, set the working directory to the `massMatchR/` folder, then run:
 
 ```r
 setwd("/path/to/MassMatchR")   # adjust path
@@ -96,18 +118,5 @@ source("run.R")
 
 The app starts on port `8100` and should open automatically in the configured browser.
 
-**Option B — using `shiny::runApp()`:**
-
-```r
-library(shiny)
-setwd("/path/to/MassMatchR")
-runApp(appDir = getwd(), port = 8100L, launch.browser = TRUE)
-```
-
-**Option C — directly from RStudio:**
-
-Open any of the four R files (`global.R`, `ui.R`, `server.R`, or `run.R`) in RStudio. A **"Run App"** button will appear in the top-right corner of the editor pane. Click it to launch.
-
-> **Port conflicts:** If port `8100` is already in use, change `port = 8100L` to another free port (e.g. `port = 8200L`) in both `run.R` and your browser bookmark.
-
 ---
+
