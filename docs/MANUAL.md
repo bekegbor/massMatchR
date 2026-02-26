@@ -2,7 +2,7 @@
 
 **massMatchR** is an interactive R Shiny application for matching mass spectrometry (MS) peak lists against a user-defined reference database within a specified tolerance window. This manual provides comprehensive instructions on preparing input files, understanding all application controls, and exporting results.
 
-If you are interested only in running the application locally, please refer to the [Local Installation Guide](docs/LOCAL_INSTALL.md)
+If you are interested only in running the application locally, please refer to the [Local Installation Guide](LOCAL_INSTALL.md)
 
 ---
 
