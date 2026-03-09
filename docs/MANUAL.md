@@ -57,15 +57,15 @@ MassMatchR performs **tolerance-based nearest-neighbour m/z matching**:
 - all available columns will be listed in the sidebar under "Pair from columns" panel.
 
 **From the available columns, you will have to specify three:**
-- `Names:` → column index containing glycan names (can point to an empty column)
+- `Names:` → column index containing glycan names (may refer to an empty column)
 - `m/z:` → column index containing theoretical m/z values (used for matching the sample data)
 - `Images:` → column index containing image IDs (used to display glycan structures in the plots)
 
-This structure allows users to create a reference databse e.g. with unmodified monoisotopic values, but also with different modifications like permethylation, etc. Thanks to this, there is no need to create different reference databses with different modifications. Also, this structure allows you to match the sample data with the reference databse via permthylated m/z, and pair the glycan structures from un-modified m/z.
+This structure allows users to create a reference database e.g. with unmodified monoisotopic values, but also with different modifications like permethylation, etc. Thanks to this, there is no need to create multiple reference databases with different modifications. Also, this structure allows you to match the sample data with the reference database via permethylated m/z, and pair the glycan structures from unmodified m/z.
 
 #### Notes on Reference Database Structure
 
-This flexible structure allows users to create a single reference database containing, for example, unmodified monoisotopic m/z values as well as values corresponding to modifiecations (e.g., permethylation).
+This flexible structure allows users to create a single reference database containing, for example, unmodified monoisotopic m/z values as well as values corresponding to modifications (e.g., permethylation).
 
 As a result, there is no need to create separate reference databases for different modification types. It also allows to match sample data using modified (e.g., permethylated) m/z values while displaying glycan structures based on the unmodified m/z values.
 
@@ -96,7 +96,7 @@ This flexible setup allows you to use measured data exported from other software
 **In the main panel, you can select:**
 - **Number of samples:** number of sheets to use (starting from sheet 1). The app also shows how many sheets (samples) are available in the uploaded file.
 
-By default, sample names are taken from the *sheet names*. You can rename them in the UI.
+By default, sample names are taken from the *sheet names*. You can rename samples in the UI.
 
 You can download and test an example reference file here:  
 [sample_example.xlsx](../example_data/sample_example.xlsx)
