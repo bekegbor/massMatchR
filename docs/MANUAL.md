@@ -220,12 +220,13 @@ In the **Plot Settings**, you can customize:
 You can show or hide:
 
 - **Structures**
-  - Image size
 - **Names**
-  - Font size
-  - Angle
 - **Percentages**
-  - Font size
+
+An you can customize:
+- **Structures image size**
+- **Names size**
+- **Names rotation angle**
 - **Image space:** Controls spacing between bars and annotations.
 
 ---
