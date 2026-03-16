@@ -47,7 +47,7 @@ install.packages(c(
 
 ## 3. Directory Structure
 
-Download the latest release as a ZIP file and extract it. The following folder structure is expected:
+Download the latest release as a ZIP file from [Releases page](https://github.com/bekegbor/massMatchR/releases) and extract it. The following folder structure is expected:
 
 ```
 MassMatchR/
