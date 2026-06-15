@@ -16,6 +16,9 @@ For detailed instructions, examples, and file specifications, see:
 
 Although massMatchR was originally developed for glycan identification from MALDI-TOF data, its core function is to match structured datasets based on selected columns and a numerical tolerance. Because of this flexibility, it can be applied to many other data-matching tasks across different scientific fields.
 
+You can also download the latest release from:
+[![DOI](https://zenodo.org/badge/1039982395.svg)](https://doi.org/10.5281/zenodo.20697072)
+
 ## Acknowledgment
 
 This work was funded by the EU NextGenerationEU through the Recovery and Resilience Plan for Slovakia under the project No. 09I03-03-V04-00681and VEGA 2/0054/25.
