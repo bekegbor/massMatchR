@@ -39,7 +39,9 @@ install.packages(c(
   "ggplot2",
   "ggrepel",
   "colourpicker",
-  "plotly"
+  "plotly",
+  "gtools",
+  "dunn.test"
 ))
 ```
 
