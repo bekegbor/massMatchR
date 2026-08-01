@@ -29,7 +29,7 @@ If you are interested only in running the application locally, please refer to t
   
 ---
 
-## 1. How MassMatchR Works
+## 1. How massMatchR Works
 
 MassMatchR performs **tolerance-based nearest-neighbour m/z matching**:
 
