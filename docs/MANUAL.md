@@ -31,7 +31,7 @@ If you are interested only in running the application locally, please refer to t
 
 ## 1. How massMatchR Works
 
-MassMatchR performs **tolerance-based nearest-neighbour m/z matching**:
+massMatchR performs **tolerance-based nearest-neighbour m/z matching**:
 
 1. The reference database is loaded and deduplicated by m/z (rounded to 4 decimal places). Rows without an m/z value are ignored.
 2. For each reference m/z value, the app checks all sample files and looks for peaks within ± *tolerance* of the reference m/z value. If several peaks fall within this range, the one closest to the reference m/z is chosen, and its intensity is recorded. If no peak is found within the tolerance range, the intensity is set to 0 (no match).
