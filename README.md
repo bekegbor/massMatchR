@@ -4,7 +4,7 @@
 
 massMatchR can be accessed freely at:
 
-- http://dublin.embnet.sk:3838/massMatchR/
+- http://www.imb.savba.sk/soft/massMatchR/
 
 It can also be installed and run locally if modifications are required, for example when the provided image list is not suitable for a specific use case.
 
