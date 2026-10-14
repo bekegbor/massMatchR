@@ -25,7 +25,8 @@ This work was funded by the EU NextGenerationEU through the Recovery and Resilie
 
 ## Citation
 
-If you use MassMatchR in academic work, please cite the manuscript and/or this repository.
+If you use MassMatchR in academic work, please cite the manuscript and this repository.
+Gábor Beke, Lubos Klucar, Zuzana Pakanová, Rebeka Kodríkova, Peter Baráth, Marek Nemčovič, massMatchR: a Shiny application for glycomics mass spectrometry data analysis, Bioinformatics, Volume 42, Issue 10, October 2026, btag700, https://doi.org/10.1093/bioinformatics/btag700
 
 ## License
 
